@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+*.blockmap
+*.dmg
+*.exe
+*.zip
+package-lock.json
+builder-effective-config.yaml
+builder-debug.yml
+Sieners Pricing*.dmg
+sieners-electron.zip
+files.zip
+*.pdf
+outputs/
+sieners-electron/
+files/

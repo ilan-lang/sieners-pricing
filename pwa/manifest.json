@@ -1,0 +1,26 @@
+{
+  "name": "Sieners SYV Group — מערכת תמחור",
+  "short_name": "Sieners",
+  "description": "מערכת תמחור אוורור ופינוי עשן",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#E8671A",
+  "orientation": "portrait-primary",
+  "lang": "he",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

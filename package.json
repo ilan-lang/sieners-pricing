@@ -1,0 +1,59 @@
+{
+  "name": "sieners-pricing",
+  "version": "1.0.0",
+  "description": "Sieners SYV Group — מערכת תמחור אוורור ופינוי עשן",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-builder --mac --c.directories.output=/tmp/sieners-build",
+    "build-win": "electron-builder --win --c.directories.output=dist",
+    "build-all": "electron-builder --mac --win"
+  },
+  "build": {
+    "appId": "com.sieners.pricing",
+    "productName": "Sieners Pricing",
+    "directories": {
+      "output": "/tmp/sieners-build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*",
+      "assets/**/*"
+    ],
+    "afterPack": "./afterPack.js",
+    "mac": {
+      "category": "public.app-category.business",
+      "icon": "assets/icon.icns",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "target": [
+        { "target": "dmg", "arch": ["arm64"] }
+      ]
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] }
+      ],
+      "publisherName": "Sieners SYV Group"
+    },
+    "dmg": {
+      "title": "Sieners Pricing"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": ["he-IL", "en-US"],
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sieners Pricing"
+    }
+  },
+  "devDependencies": {
+    "electron": "^36.0.0",
+    "electron-builder": "^26.0.0"
+  }
+}
